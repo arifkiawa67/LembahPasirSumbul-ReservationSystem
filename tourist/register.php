@@ -14,8 +14,10 @@ if (isset($_POST['register'])) {
 
     if ($conn->query($sql) === TRUE) {
         // Set pesan sukses jika registrasi berhasil
-        $success_message = "Registrasi berhasil untuk $email, silahkan masuk untuk melanjutkan.";
-    } else {
+        // Memanggil send_notif.php untuk mengirim notifikasi
+        $message = "Selamat $name! Nomor HP Anda telah berhasil terhubung ke sistem reservasi Lembah Pasir Sumbul Camping Ground.";
+        include('send_notif.php'); // Pastikan send_notif.php sudah sesuai
+        sendNotification($phone, $message); // Fungsi untuk mengirim notifikasi    } else {
         $error_message = "Terjadi kesalahan saat mendaftar. Coba lagi.";
     }
 }
