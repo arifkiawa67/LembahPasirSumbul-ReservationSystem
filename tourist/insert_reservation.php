@@ -7,7 +7,7 @@ if (!isset($_SESSION['id_tourist']) || !isset($_SESSION['name_tourist'])) {
     header('Location: login.php');
     exit();
 }
-include('send_notif_booking.php');
+
 
 include('db_connection.php');  // Include the database connection
 
@@ -61,6 +61,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id_off_reservation = $stmt->insert_id;  // Get the last inserted reservation ID
         $rent_success = true;  // Track rental success
 
+        $phone_query = "SELECT phone_number_tourist FROM tb_tourist WHERE id_tourist = ?";
+        $phone_stmt = $conn->prepare($phone_query);
+        $phone_stmt->bind_param("i", $id_tourist);
+        $phone_stmt->execute();
+        $phone_result = $phone_stmt->get_result();
+        $tourist = $phone_result->fetch_assoc();
+        $phone = $tourist['phone_number_tourist'];
+
         // Handle tool rentals if 'yes' is selected
         if ($rent_tools == 'yes') {
             if (!empty($tools_selected) && !empty($qty_tools)) {
@@ -108,13 +116,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // SweetAlert2 success notification
         if ($rent_success) {
-            $message = "Halo! Terima kasih telah melakukan reservasi di layanan kami. Detail reservasi Anda adalah sebagai berikut:\n\n" .
-            "📅 Tanggal Reservasi: $tanggal_reservasi\n" .
-            "🛠️ Penyewaan Alat: " . ($rent_tools == 'yes' ? 'Ya' : 'Tidak') . "\n" .
-            "💳 Total Harga: Rp " . number_format($total_price, 0, ',', '.') . "\n\n" .
-            "Reservasi Anda akan segera diproses oleh tim kami. Mohon tunggu konfirmasi lebih lanjut. Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami.\n\n" .
-            "Salam hangat,\nTim Reservasi";
-            sendNotificationBooking($userPhone, $message);
+            $message = "Reservasi Berhasil!\n\nTerima kasih telah melakukan reservasi layanan kami.\nTanggal reservasi: $tanggal_reservasi\nLayanan: $service_price\nTotal: $total_price\n\nKami siap menyambut kedatangan Anda!";
+            include('send_notifs.php'); // Pastikan send_notif.php sudah sesuai
+            sendNotificationx($phone, $message); // Fungsi untuk mengirim notifikasi    
+            
             echo "
             <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
             <script>
