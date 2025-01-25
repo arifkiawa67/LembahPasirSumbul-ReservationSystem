@@ -1,10 +1,13 @@
 <?php
 session_start();
 
+
+
 if (!isset($_SESSION['id_tourist']) || !isset($_SESSION['name_tourist'])) {
     header('Location: login.php');
     exit();
 }
+include('send_notif_booking.php');
 
 include('db_connection.php');  // Include the database connection
 
