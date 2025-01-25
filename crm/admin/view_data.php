@@ -41,10 +41,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updateQuery = "UPDATE tb_reservation SET id_status = ?, visit_end_date = ? WHERE id_reservation = ?";
         $updateStmt = $conn->prepare($updateQuery);
         $updateStmt->bind_param("isi", $new_status, $current_date, $id);
+        
+        // Send "Reservasi Selesai" notification to tourist
+        $message = "Reservasi Anda telah selesai. Terima kasih telah menggunakan layanan kami!";
+        $phone = $data['phone_number_tourist'];
+        include('send_notifs.php');
+        sendNotificationx($phone, $message);  // Send notification
+
     } else {
         $updateQuery = "UPDATE tb_reservation SET id_status = ? WHERE id_reservation = ?";
         $updateStmt = $conn->prepare($updateQuery);
         $updateStmt->bind_param("ii", $new_status, $id);
+
+        // Send status-based notification to tourist
+        if ($new_status == 2) {
+            // Reservasi disetujui
+            $message = "Reservasi Anda disetujui! Silahkan upload bukti pembayaran di sistem.";
+            $phone = $data['phone_number_tourist'];
+            include('send_notifs.php');
+            sendNotificationx($phone, $message);  // Send notification
+        } elseif ($new_status == 6) {
+            // Reservasi ditolak
+            $message = "Reservasi Anda ditolak, silahkan coba lagi dengan data yang lebih akurat.";
+            $phone = $data['phone_number_tourist'];
+            include('send_notifs.php');
+            sendNotificationx($phone, $message);  // Send notification
+        } elseif ($new_status == 3) {
+            // Pembayaran diterima
+            $message = "Pembayaran Anda telah diterima, reservasi telah berhasil. Silahkan datang ke lokasi kami dan tunjukkan identitas Anda pada tanggal reservasi yang ditentukan.";            $phone = $data['phone_number_tourist'];
+            include('send_notifs.php');
+            sendNotificationx($phone, $message);  // Send notification
+        } elseif ($new_status == 7) {
+            // Pembayaran ditolak
+            $message = "Pembayaran Anda ditolak. Silahkan coba lagi.";
+            $phone = $data['phone_number_tourist'];
+            include('send_notifs.php');
+            sendNotificationx($phone, $message);  // Send notification
+        }
+
     }
     
     if ($updateStmt->execute()) {
@@ -57,6 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
