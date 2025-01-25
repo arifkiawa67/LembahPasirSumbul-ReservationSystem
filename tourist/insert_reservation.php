@@ -105,6 +105,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // SweetAlert2 success notification
         if ($rent_success) {
+            $message = "Halo! Terima kasih telah melakukan reservasi di layanan kami. Detail reservasi Anda adalah sebagai berikut:\n\n" .
+            "📅 Tanggal Reservasi: $tanggal_reservasi\n" .
+            "🛠️ Penyewaan Alat: " . ($rent_tools == 'yes' ? 'Ya' : 'Tidak') . "\n" .
+            "💳 Total Harga: Rp " . number_format($total_price, 0, ',', '.') . "\n\n" .
+            "Reservasi Anda akan segera diproses oleh tim kami. Mohon tunggu konfirmasi lebih lanjut. Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami.\n\n" .
+            "Salam hangat,\nTim Reservasi";
+            sendNotificationBooking($userPhone, $message);
             echo "
             <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
             <script>

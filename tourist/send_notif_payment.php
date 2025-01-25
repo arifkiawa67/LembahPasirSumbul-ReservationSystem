@@ -1,5 +1,5 @@
 <?php
-function sendNotification($target, $message) {
+function sendNotificationUploadBayar($target, $message) {
     $token = 'wfxhwdZUv2h3TcUWtY31'; // Ganti dengan token Anda
 
     // Mengirim pesan menggunakan API
@@ -30,7 +30,7 @@ function sendNotification($target, $message) {
     // Log atau tampilkan respons API untuk debugging
     echo "Pesan dikirim ke: $target<br>";
     echo "Response: $response<br>";
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 ?>
