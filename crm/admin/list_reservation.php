@@ -345,7 +345,6 @@ if (!$result_online_reservation) {
                                                                         switch ($row['id_status']) {
                                                                             case 1: 
                                                                                 echo '<a href="view_data.php?id=' . $row['id_reservation'] . '" class="btn btn-info btn-sm">Lihat Data</a> ';
-                                                                                echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=reject" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin tolak reservasi ini?\')">Tolak Reservasi</a>';
                                                                                 break;
                                                                             case 2: 
                                                                                 echo '<a href="view_data.php?id=' . $row['id_reservation'] . '" class="btn btn-info btn-sm">Lihat Data</a> ';
