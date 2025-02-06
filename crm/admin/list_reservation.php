@@ -348,17 +348,17 @@ if (!$result_online_reservation) {
                                                                                 break;
                                                                             case 2: 
                                                                                 echo '<a href="view_data.php?id=' . $row['id_reservation'] . '" class="btn btn-info btn-sm">Lihat Data</a> ';
-                                                                                echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=payment_accepted" class="btn btn-success btn-sm">Pembayaran Diterima</a> ';
-                                                                                echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=payment_rejected" class="btn btn-warning btn-sm">Pembayaran Tidak Diterima</a>';
+                                                                                // echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=payment_accepted" class="btn btn-success btn-sm">Pembayaran Diterima</a> ';
+                                                                                // echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=payment_rejected" class="btn btn-warning btn-sm">Pembayaran Tidak Diterima</a>';
                                                                                 break;
                                                                             case 3: 
                                                                                 echo '<a href="view_data.php?id=' . $row['id_reservation'] . '" class="btn btn-info btn-sm">Lihat Data</a> ';
-                                                                                echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=start" class="btn btn-primary btn-sm">Mulai Reservasi</a> ';
-                                                                                echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=cancel" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin batalkan reservasi ini?\')">Cancel Reservasi</a>';
+                                                                                // echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=start" class="btn btn-primary btn-sm">Mulai Reservasi</a> ';
+                                                                                // echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=cancel" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin batalkan reservasi ini?\')">Cancel Reservasi</a>';
                                                                                 break;
                                                                             case 4: 
                                                                                 echo '<a href="view_data.php?id=' . $row['id_reservation'] . '" class="btn btn-info btn-sm">Lihat Data</a> ';
-                                                                                echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=complete" class="btn btn-success btn-sm">Selesaikan Reservasi</a>';
+                                                                                // echo '<a href="update_reservasi_online.php?id=' . $row['id_reservation'] . '&action=complete" class="btn btn-success btn-sm">Selesaikan Reservasi</a>';
                                                                                 break;
                                                                             default: 
                                                                                 echo 'No actions available';
