@@ -60,13 +60,13 @@ $total_tools = $tools['total_tools'];
     <link rel="icon" href="https://colorlib.com/polygon/admindek/files/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/waves.min.css" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/feather.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome-n.min.css">
+    <link rel="stylesheet" type="text/css" href="../manager/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../manager/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="../manager/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="../manager/css/font-awesome-n.min.css">
     <link rel="stylesheet" href="css/chartist.css" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/widget.css">
+    <link rel="stylesheet" type="text/css" href="../manager/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../manager/css/widget.css">
 </head>
 
 <body>
@@ -292,31 +292,31 @@ $total_tools = $tools['total_tools'];
     </div>
 
 
-    <script data-cfasync="false" src="js/email-decode.min.js"></script>
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/jquery.min.js"></script>
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/popper.min.js"></script>
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/bootstrap.min.js"></script>
+    <script data-cfasync="false" src="../manager/js/email-decode.min.js"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/jquery.min.js"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/jquery-ui.min.js"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/popper.min.js"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/bootstrap.min.js"></script>
 
-    <script src="js/waves.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/waves.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
 
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/jquery.slimscroll.js"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/jquery.slimscroll.js"></script>
 
-    <script src="js/jquery.flot.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script src="js/jquery.flot.categories.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script src="js/curvedlines.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script src="js/jquery.flot.tooltip.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/jquery.flot.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/jquery.flot.categories.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/curvedlines.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/jquery.flot.tooltip.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
 
-    <script src="js/chartist.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/chartist.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
 
-    <script src="js/amcharts.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script src="js/serial.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script src="js/light.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/amcharts.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/serial.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/light.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
 
-    <script src="js/pcoded.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script src="js/vertical-layout.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/custom-dashboard.min.js"></script>
-    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="js/script.min.js"></script>
+    <script src="../manager/js/pcoded.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script src="../manager/js/vertical-layout.min.js" type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/custom-dashboard.min.js"></script>
+    <script type="d2d1d6e2f87cbebdf4013b26-text/javascript" src="../manager/js/script.min.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
         type="d2d1d6e2f87cbebdf4013b26-text/javascript"></script>
@@ -330,7 +330,7 @@ $total_tools = $tools['total_tools'];
 
     gtag('config', 'UA-23581568-13');
     </script>
-    <script src="js/rocket-loader.min.js" data-cf-settings="d2d1d6e2f87cbebdf4013b26-|49" defer=""></script>
+    <script src="../manager/js/rocket-loader.min.js" data-cf-settings="d2d1d6e2f87cbebdf4013b26-|49" defer=""></script>
 </body>
 
 

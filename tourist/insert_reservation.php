@@ -1,15 +1,13 @@
 <?php
 session_start();
 
-
+include('db_connection.php');  // Include the database connection
 
 if (!isset($_SESSION['id_tourist']) || !isset($_SESSION['name_tourist'])) {
     header('Location: login.php');
     exit();
 }
 
-
-include('db_connection.php');  // Include the database connection
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tanggal_reservasi = $_POST['tanggal_reservasi'];

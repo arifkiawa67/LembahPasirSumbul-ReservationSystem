@@ -149,6 +149,7 @@ $show_upload_button = ($reservation['id_status'] == 2);
             <br></br>
         <?php if ($show_upload_button): ?>
             <div class="upload-payment-proof">
+            <p><strong>Harap Transfer ke rekening BCA 7610769149 atas nama Satrio Jaelawi Jaya</strong></p>
                 <form action="upload_payment_proof.php" method="post" enctype="multipart/form-data">
                     <label for="payment_picture">Unggah Bukti Pembayaran:</label>
                     <input type="file" name="payment_picture" id="payment_picture" required>
