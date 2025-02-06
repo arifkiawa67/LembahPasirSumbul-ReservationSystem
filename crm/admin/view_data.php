@@ -8,7 +8,7 @@ if (!isset($_GET['id'])) {
 $id = intval($_GET['id']);
 
 $query = "SELECT tbro.id_reservation, tbr.name_tourist, tbr.email_tourist, tbr.phone_number_tourist, 
-          tbs.name_services, tbs.desc_services, tbs.price_services, tbro.reservation_date, 
+          tbs.name_services, tbs.desc_services, tbro.price, tbro.reservation_date, 
           tbro.visit_start_date, tbro.visit_end_date, tbro.payment_picture, 
           tbst.title_status, tbst.desc_status, tbro.id_status
           FROM tb_reservation tbro 
@@ -195,7 +195,7 @@ $conn->close();
             </tr>
             <tr>
                 <th>Harga</th>
-                <td>Rp<?= htmlspecialchars(number_format($data['price_services'], 0, ',', '.')) ?></td>
+                <td>Rp<?= htmlspecialchars(number_format($data['price'], 0, ',', '.')) ?></td>
             </tr>
             <tr>
                 <th>Bukti Pembayaran</th>
